@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.achach.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> <!-- sirve para darle instrucciones al sistema para abrir -->
+        </activity>
+        <activity
+            android:name=".view.CreateAccountActivity"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginActivity" />
+        </activity>
+        <activity
+            android:name=".ReferenciaActivity"
+            android:label="@string/title_activity_referencia"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity android:name=".view.ContainerActivity"></activity>
+    </application>
+
+</manifest> <!-- activity --><!-- intent filter define un lugar a la actividad --><!-- action define al sistema que cuando abra la app la primera pantalla de todas las act que abra el login primero --><!-- sirve para darle inst que tiene que abrir cuando detecte el evento o suceda en la app por ejem abrir la app intent filter le dira que la lanzara con el LUNCHER --><!--  --><!-- android parent es que la actividad sera el hijo y el meta data sera para que le den soporte -->
